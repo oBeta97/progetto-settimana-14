@@ -100,5 +100,12 @@ public class GameLibrary {
     public LibraryGeneralStatistics statistics (){
         return new LibraryGeneralStatistics(this.library);
     }
+
+    @Override
+    public String toString() {
+        return "GameLibrary{" +
+                "\n\tlibrary=\n\t" + library +
+                "\n}";
+    }
 }
 

@@ -49,7 +49,7 @@ public class VideoGame extends Game{
                 "\n\tplatforms=" + platforms +
                 "\n\tgameDuration=" + gameDuration +
                 "\n\tgenre=" + genre +
-                "\n}";
+                "\n}\n";
     }
 }
 

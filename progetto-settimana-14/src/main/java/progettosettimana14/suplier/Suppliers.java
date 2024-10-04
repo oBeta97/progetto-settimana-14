@@ -64,6 +64,7 @@ public class Suppliers {
     };
 
 
+    // Metodo utilizzato per i test
     public static List<Game> getRandomGameList(int listLength) {
 
         List<Game> res = new ArrayList<>();

@@ -39,6 +39,6 @@ public class TableGame extends Game {
                 "\n\ttype= TableGame" +
                 "\n\tnumberOfPlayer=" + numberOfPlayer +
                 "\n\tavgGameDuration=" + avgGameDuration +
-                "\n}";
+                "\n}\n";
     }
 }
