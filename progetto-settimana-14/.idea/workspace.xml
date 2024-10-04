@@ -7,11 +7,6 @@
     <list default="true" id="9291d99d-e4a1-491a-b1c8-298807af62d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/progettosettimana14/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/progettosettimana14/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/progettosettimana14/entities/GameLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/progettosettimana14/entities/GameLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/progettosettimana14/entities/TableGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/progettosettimana14/entities/TableGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/progettosettimana14/entities/VideoGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/progettosettimana14/entities/VideoGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/progettosettimana14/suplier/Suppliers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/progettosettimana14/suplier/Suppliers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/progettosettimana14/utils/ReadInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/progettosettimana14/utils/ReadInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

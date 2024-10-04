@@ -3,6 +3,7 @@ package progettosettimana14;
 import progettosettimana14.entities.Game;
 import progettosettimana14.entities.GameLibrary;
 import progettosettimana14.exceptions.DuplicatedGameKeyException;
+import progettosettimana14.exceptions.GameNotFoundException;
 import progettosettimana14.suplier.Suppliers;
 import progettosettimana14.utils.AppActions;
 import progettosettimana14.utils.ReadInput;
@@ -55,7 +56,34 @@ public class Application {
                     } catch (DuplicatedGameKeyException e) {
                         System.out.println("Errore nell'inserimento, chiave doppia");
                     }
+                    break;
+                case 2:
+                    try{
+                        System.out.println(myLibrary.searchByID(
+                                ReadInput.readNumber("Indica l'id che vuoi cercare:", s)
+                        ));
 
+                    } catch (GameNotFoundException e) {
+                        System.out.println("ID Non trovato!");
+                    }
+                    break;
+                case 3:
+                    try{
+                        System.out.println(myLibrary.searchByPrice(
+                                ReadInput.readDouble("Inserisci il prezzo massimo da ricercare:",s)
+                        ));
+                    } catch (GameNotFoundException e) {
+                        System.out.println("Non ci sono giochi con un prezzo inferiore a quello inserito");
+                    }
+                    break;
+                case 4:
+                    try{
+                        System.out.println(myLibrary.searchByNumberOfPlayer(
+                                ReadInput.readNumber("Inserisci il nr massimo di giocatori da ricercare", s)
+                        ));
+                    } catch (GameNotFoundException e) {
+                        System.out.println("Non ci sono giochi con un numero di giocatori inferiore a quello inserito");
+                    }
                     break;
                 case 8:
                     System.out.println(myLibrary);
