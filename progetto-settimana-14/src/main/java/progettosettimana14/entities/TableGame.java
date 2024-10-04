@@ -32,4 +32,13 @@ public class TableGame extends Game {
     public void setAvgGameDuration(int avgGameDuration) {
         this.avgGameDuration = avgGameDuration;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\n\ttype= TableGame" +
+                "\n\tnumberOfPlayer=" + numberOfPlayer +
+                "\n\tavgGameDuration=" + avgGameDuration +
+                "\n}";
+    }
 }
