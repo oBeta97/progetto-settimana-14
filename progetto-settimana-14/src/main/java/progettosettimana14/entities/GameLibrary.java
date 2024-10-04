@@ -66,7 +66,7 @@ public class GameLibrary {
 
     }
 
-    public void removeID (int idToRemove) throws GameNotFoundException {
+    public int removeID (int idToRemove) throws GameNotFoundException {
 
 //        CODICE GENERATO DA ME
 //        if(library.stream().noneMatch(game -> game.getId() == idToRemove))
@@ -78,6 +78,7 @@ public class GameLibrary {
         if(!library.removeIf(game -> game.getId() == idToRemove))
             throw new GameNotFoundException();
 
+        return idToRemove;
     }
 
     public void updateByID (int idToUpdate, Game newData) throws GameNotFoundException {

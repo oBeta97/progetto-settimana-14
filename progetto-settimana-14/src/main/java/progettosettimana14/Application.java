@@ -2,6 +2,7 @@ package progettosettimana14;
 
 import progettosettimana14.entities.Game;
 import progettosettimana14.entities.GameLibrary;
+import progettosettimana14.entities.LibraryGeneralStatistics;
 import progettosettimana14.exceptions.DuplicatedGameKeyException;
 import progettosettimana14.exceptions.GameNotFoundException;
 import progettosettimana14.suplier.Suppliers;
@@ -47,7 +48,7 @@ public class Application {
                     "\n\t 6. Aggiorna dettagli gioco" +
                     "\n\t 7. Statistiche della libreria" +
                     "\n\t 8. Visualizza libreria" +
-                    "\n\t 9. Esci";
+                    "\n\t 0. Esci";
 
             switch(ReadInput.readNumber(msg, s)){
                 case 1:
@@ -85,13 +86,47 @@ public class Application {
                         System.out.println("Non ci sono giochi con un numero di giocatori inferiore a quello inserito");
                     }
                     break;
+                case 5:
+                    try{
+                        System.out.println("L'indice " +
+                            myLibrary.removeID(
+                                ReadInput.readNumber("Inserisci l'indice da eliminare:",s)
+                            )
+                            + " è stato rimosso"
+                        );
+                    } catch (GameNotFoundException e) {
+                        System.out.println("Indice non trovato");
+                    }
+                    break;
+                case 6:
+                    try{
+                        if(ReadInput.readYN("Attenzione! Dovrai reinserire tutti i dati del gioco. Continuare?",s)){
+
+                            myLibrary.updateByID(
+                                    ReadInput.readNumber("Inserisci l'indice da modificare",s),
+                                    AppActions.addGame(s)
+                            );
+                            System.out.println("Dettagli Aggiornati!");
+                        }
+                    } catch (GameNotFoundException e) {
+                        System.out.println("Indice non trovato");
+                    }
+                    break;
+                case 7:
+                    LibraryGeneralStatistics stats = myLibrary.statistics();
+
+                    System.out.println("Nr totale giochi: " + stats.getGameCount());
+                    System.out.println("Nr video giochi: " + stats.getVideoGameCount());
+                    System.out.println("Nr giochi da tavolo: " + stats.getTableGameCount());
+                    System.out.println("Media dei prezzi: " + stats.getAvgPrice());
+                    break;
                 case 8:
                     System.out.println(myLibrary);
                     break;
-                case 9:
+                case 0:
                     break mainMenu;
                 default:
-                    System.out.println("ciao!");
+                    System.out.println("Valore inserito non corretto!");
             }
         }
 
